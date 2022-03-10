@@ -4,8 +4,8 @@ from modules.document import Document
 
 class Indexer:
     """Индексирует датасет и хранит словари"""
-    def __init__(self):
-        self.token_vocab = Vocab(lowercase=True, paddings=True)
+    def __init__(self, lowercase: bool):
+        self.token_vocab = Vocab(lowercase=lowercase, paddings=True)
 
     def index_documents(self, documents: List[Document]):
         """
